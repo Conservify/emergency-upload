@@ -1,3 +1,9 @@
 #!/bin/bash
 
-./bossac_osx  -i -d --port=$1 -U true -i -e -w -v collector.bin -R 
+set -e
+
+rm -f collector.bin
+
+curl https://conservify.page5of4.com/distribution/okavango/collector/latest/adafruit-samd-adafruit_feather_m0/collector.bin -o collector.bin
+
+./bossac_osx  -i -d --port=$1 -U true -i -e -w -v collector.bin -R
