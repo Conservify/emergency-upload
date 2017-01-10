@@ -2,7 +2,7 @@
 
 set -e
 
-WHICH=collector
+WHICH=ngdemo
 
 rm -f $WHICH.bin
 
